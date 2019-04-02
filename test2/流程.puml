@@ -1,0 +1,15 @@
+@startuml
+start
+:管理人员购买图书;
+:管理人员登陆系统;
+repeat
+    :管理人输入新增书目和数目;
+    if (是新的书籍吗?) then (是)
+    :直接将数据写入数据库;
+    else (否)
+    :查询到数目行修改信息;
+    endif
+    :反馈给管理员;
+repeat while(管理员确认信息)
+stop
+@enduml
