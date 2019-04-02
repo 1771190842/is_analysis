@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+:图书管理员: as Admin
+rectangle {
+(管理借阅) as mm
+(管理图书) as mb
+(管理借阅者) as mr
+Admin-->(mm)
+Admin-->(mb)
+Admin-->(mr)
+mm<|--(同意借书)
+mm<|--(拒绝借书)
+mb<|--(增加书籍)
+mb<|--(减少书籍)
+mb<|--(查询书籍)
+mr<|--(增加借阅者)
+mr<|--(删除借阅者)
+mr<|--(查询借阅者)
+}
+
+actor 读者  as user
+rectangle {
+user-->(查阅书目)
+user-->(预定图书)
+user-->(取消预定)
+user-->(借书)
+user-->(还书)
+user-->(查阅借阅情况)
+}
+@enduml
