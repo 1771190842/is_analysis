@@ -1,0 +1,38 @@
+@startuml
+class 书籍 {
+  Int ：书本id
+  String ：书名
+  String ：作者
+  Date ：购买日期
+}
+class 借书记录 {
+  Date ：借书日期
+  Date ：归还日期
+  bool : 管理员处理情况
+}
+class 用户 {
+  Int ：用户ID
+  String ：用户密码
+  String ：其他用户信息
+  Date ：注册日期
+}
+class 记录{
+    Int : 流水号
+    Int ：书本号
+    Int : 借阅者id
+}
+class 预定记录 {
+    Date ：预定日期
+    Date ：预定过期日期
+}
+class 管理员 {
+  Int ：管理员ID
+  String ：密码
+  String ：姓名
+}
+记录<|--预定记录
+记录<|--借书记录
+管理员"1"--"*"记录 :审核
+用户"1"--"*"记录 :申请
+书籍"1"--"*"记录
+@enduml

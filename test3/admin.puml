@@ -1,0 +1,7 @@
+@startuml
+object 管理员 {
+  管理员ID = 99999
+  密码 = 99999
+  姓名 = 管理
+}
+@enduml

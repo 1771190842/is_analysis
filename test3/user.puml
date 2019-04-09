@@ -1,0 +1,8 @@
+@startuml
+object 用户 {
+  用户ID = 11111
+  用户密码 = 11111
+  其他用户信息 = fdsfadsad
+  注册日期 = 2018.1.1
+}
+@enduml
