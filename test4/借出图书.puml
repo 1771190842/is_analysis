@@ -1,0 +1,20 @@
+@startuml
+actor 读者
+activate 读者
+读者 ->藏书书库 :查询可借阅书籍
+activate 藏书书库
+藏书书库 ->读者 :返回查询结果
+读者 -> 管理员 :申请借阅书籍
+activate 管理员
+管理员 -> 借书记录 :审核信息查看往期记录
+activate 借书记录
+借书记录 ->管理员 :返回信息
+管理员 -> 借书记录 :审核通过同意借书
+借书记录 ->读者 :借书成功
+借书记录 ->管理员 :借书成功
+管理员 -> 藏书书库 :减少书籍
+deactivate 管理员
+deactivate 借书记录
+deactivate 读者
+deactivate 藏书书库
+@enduml

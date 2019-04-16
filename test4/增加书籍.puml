@@ -1,0 +1,12 @@
+@startuml
+activate 管理员
+activate 系统
+actor 管理员
+管理员 ->系统 :登陆
+管理员 -> 书籍信息 :录入
+activate 书籍信息
+书籍信息 ->书库 :加入
+deactivate 书籍信息
+activate 书库
+书库 ->管理员 :书籍加入成功
+@enduml

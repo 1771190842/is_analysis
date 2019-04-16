@@ -1,0 +1,17 @@
+@startuml
+actor 读者
+activate 读者
+读者 ->借书记录 :查询自己已经借的书
+activate 借书记录
+借书记录 ->读者 :返回查询结果
+deactivate 借书记录
+读者 -> 管理员 :申请归还书籍
+activate 管理员
+管理员 -> 书库 :审核信息并归还
+activate 书库
+书库 ->管理员 : 归还成功
+书库 ->读者 : 归还成功
+deactivate 书库
+deactivate 管理员
+deactivate 读者
+@enduml
