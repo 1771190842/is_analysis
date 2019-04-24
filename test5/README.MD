@@ -46,9 +46,9 @@
 - 顺序图参见：借书顺序图
 - API接口如下：
 
-1. 获取全部分类
+1. 借书
 
-- 功能：用于获取全部分类
+- 功能：用于借书
 - 请求地址： https://github.com/1771190842/is_analysis/blob/master/uri/home.html
 - 请求方法：POST ,put
 - 请求参数：
@@ -69,15 +69,61 @@
         "user_id": "14361",
         "Date_start": "1997-10-10",
         "Date_end": "1997-10-20",
+        "avatar128": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/128x128!",
+        "avatar512": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/512x512!"
     },
     "code": 200
 }
 ```
 - 返回参数说明：
+  
+  
+ 2.借书信息   
+  
+  - 功能：借书信息  
+  - 请求地址： https://github.com/1771190842/is_analysis/blob/master/uri/home.html
+  - 请求方法：POST ,put
+  - 请求参数：  
+ 
     
 |参数名称|说明|
 |:-------:|:-------------: |
 |Info|返回信息|
 |data|书籍借阅信息|
-|code|返回码|
+|code|返回码|1. 借书
+          
+          - 功能：用于借书
+          - 请求地址： https://github.com/1771190842/is_analysis/blob/master/uri/home.html
+          - 请求方法：POST ,put
+          - 请求参数：
+          
+          |参数名称|必填|说明|
+          |:-------:|:-------------: | :----------:|
+          |access_token|是|用于验证请求合法性的认证信息。 |
+          |method|是|get或post|
+          
+          - 返回实例：
+          ```
+          {
+              "info": "感谢您的支持。",
+              "data": {
+                  "ID": "682626"
+                  "book_id": "645612656",
+                  "name": "盛大的"
+                  "user_id": "14361",
+                  "Date_start": "1997-10-10",
+                  "Date_end": "1997-10-20",
+                  "avatar128": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/128x128!",
+                  "avatar512": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/512x512!"
+              },
+              "code": 200
+          }
+          ```
+          - 返回参数说明：
+              
+          |参数名称|说明|
+          |:-------:|:-------------: |
+          |Info|返回信息|
+          |data|书籍借阅信息|
+          |code|返回码|
 
