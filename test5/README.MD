@@ -49,7 +49,7 @@
 1. 获取全部分类
 
 - 功能：用于获取全部分类
-- 请求地址： http://202.115.86.207/v1/api/get
+- 请求地址： https://github.com/1771190842/is_analysis/blob/master/uri/home.html
 - 请求方法：POST ,put
 - 请求参数：
 
