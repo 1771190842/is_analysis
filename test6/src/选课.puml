@@ -1,0 +1,10 @@
+@startuml
+title 基于GitHub的实验管理平台--选课列表
+actor teacherORstudent
+teacherORstudent -> courses :查询可选课程
+
+	courses -> teacherORstudent
+	teacherORstudent->course : 选择课程
+	course -> student_course :学生选课，写入关联表
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+title 基于GitHub的实验管理平台--评定成绩用例的顺序图
+actor teachers
+== 查看成绩 ==
+teachers -> courses :选择课程
+courses -> student_course : 查看关联学生
+student_course -> students :查询所用学生信息
+students -> teachers :返回学生信息
+students -> student_test
+student_test -> tests
+students -> student_item
+student_item -> items
+tests -> teachers : 返回实验信息
+items -> teachers : 返回评分项信息
+student_item -> teachers : 返回评分项成绩
+student_test -> teachers :返回实验成绩
+== 评定成绩 ==
+teachers -> student_item :写入评分项目信息
+student_item -> student_test : 自动计算实验成绩
+student_test -> student_course : 自动计算课程成绩
+@enduml

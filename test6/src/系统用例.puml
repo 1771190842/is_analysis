@@ -1,0 +1,28 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+actor 学生
+actor 老师
+actor 用户
+用户 <|-- 老师
+用户 <|-- 学生
+package 用户用例集 {
+用户 --up-> (登录)
+用户 --up-> (登出)
+用户 --up-> (查看用户信息)
+用户 --up-> (修改用户信息)
+}
+package 业务用例集 {
+学生 --up-> (选课/退选)
+学生 --up-> (查看 课程/实验 评分)
+学生 --up-> (查看学期对应的已选择课程列表)
+}
+package 业务用例集 {
+老师 --up-> (选课/退选)
+老师 --up-> (对实验评分项打分)
+老师 --up-> (查看课程对应的选课学生列表)
+老师 --up-> (查看学期对应的已选择课程列表)
+}
+
+@enduml

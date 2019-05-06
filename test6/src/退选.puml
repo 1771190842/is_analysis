@@ -1,0 +1,10 @@
+@startuml
+title 基于GitHub的实验管理平台--选课列表
+actor teacherORstudent
+teacherORstudent -> courses :查询可退选课程
+
+	courses -> teacherORstudent
+	teacherORstudent->course : 退选课程
+	course -> student_course :学生退选，删除关联表行
+
+@enduml

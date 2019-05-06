@@ -1,0 +1,71 @@
+@startuml
+title 基于GitHub的实验管理平台--类图
+class users {
+    <b>user_id</b> （用户ID）
+    name （用户真实姓名）
+    github_username （用户GitHub账号）
+    update_date （用户GitHub账号修改日期）
+    password （用户密码）
+    disable （用户是否禁用）
+}
+class teachers{
+    <b>teacher_id</b> （老师工号）
+    department （老师所属部门）
+}
+class students{
+    <b>student_id</b> （学号）
+    class （班级）
+    grade （年级）
+    web_sum （网站正确与否汇总）
+}
+users <|- students
+users <|-- teachers
+
+class courses{
+    <b>course_id</b> （课程号）
+    grade （适用学期）
+    capacity （课程容量）
+    adress （上课地点）
+    repository （指定的github仓库名）
+    teacher_id （选择这门课的老师id）
+}
+class tests {
+     <b>course_id</b> （课程号）
+     <b>test_id</b> （实验编号）
+     title （实验名称）
+ }
+ class items{
+     <b>item_id</b> （评分项id）
+     <b>test_id</b> （实验项id）
+     message （评分项内容）
+ }
+
+class student_course{
+     <b>student_id</b> （学生的id）
+     <b>course_id</b> （课程id）
+     sore （课程评分）
+}
+
+class student_test{
+    <b>test_id</b> （实验编号）
+    <b>student_id</b> （学号）
+    score （实验分数）
+}
+class student_item{
+    <b>student_id</b> （学号）
+    <b>item_id</b> （评分项id）
+    score （评分项目分数）
+    sugggest（评分项评语）
+}
+
+
+students "1" -- "n"  student_course
+student_course "n" -- "1" courses
+teachers "1" -- "n"  courses
+courses "1" -- "n"  tests
+tests "1" -- "n" items
+students "1" -- "n"  student_item
+student_item "n" -- "1" items
+students "1" -- "n"  student_test
+student_test "n" -- "1" tests
+@enduml
