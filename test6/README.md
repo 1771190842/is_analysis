@@ -41,12 +41,12 @@
 
 ## 6. 用例及界面详细设计
 - ### [“界面集合”](https://1771190842.github.io/is_analysis_pages/test6/ui/#g=1&p=home)
-- ### [“课程的学生列表”用例](./用例/课程学生列表.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/course-students)
+- ### [“课程的学生列表”用例](./用例/课程学生列表.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/course-students.html)
 - ### [“评定成绩”用例](./用例/成绩评分.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/test.html)
 - ### [“查看成绩”用例](./用例/查看成绩.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/test.html)
 - ### [“修改用户信息”用例](./用例/修改用户信息.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/change-message.html)
 - ### [“查看用户信息”用例](./用例/查看用户信息.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/self-message.html)
 - ### [“登出”用例](./用例/登出.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/top.html)
 - ### [“登录”用例](./用例/登录.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/top.html)
-- ### [“选课”用例](./用例/选课.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/courses-list)
-- ### [“退课”用例](./用例/退选.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/courses-list)
+- ### [“选课”用例](./用例/选课.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/courses-list.html)
+- ### [“退课”用例](./用例/退选.md),[界面](https://1771190842.github.io/is_analysis_pages/test6/ui/courses-list.html)
