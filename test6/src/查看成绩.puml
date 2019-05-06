@@ -5,7 +5,8 @@ actor student
 
 student -> student_test
 student_test -> tests
-students -> student_item
+tests -> student
+student -> student_item
 student_item -> items
 tests -> student : 返回实验信息
 items -> student : 返回评分项信息
